@@ -2,16 +2,54 @@ services:
   ecommerce-db:
     image: postgres:16-alpine
     container_name: ecommerce-db
+    restart: unless-stopped
     environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
       POSTGRES_DB: ecommerce
-    ports:
-      - "127.0.0.1:5432:5432"  # solo accesible desde localhost
     volumes:
       - ecommerce-db-data:/var/lib/postgresql/data
+    networks:
+      - ecommerce-net
+    ports:
+      - "127.0.0.1:5432:5432"
+
+  ecommerce-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ecommerce-backend
     restart: unless-stopped
+    depends_on:
+      - ecommerce-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://ecommerce-db:5432/ecommerce
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin123
+      SPRING_PROFILES_ACTIVE: prod
+    networks:
+      - ecommerce-net
+    ports:
+      - "8080:8080"
+
+  ecommerce-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ecommerce-frontend
+    restart: unless-stopped
+    depends_on:
+      - ecommerce-backend
+    networks:
+      - ecommerce-net
+    ports:
+      - "5173:5173"  # Vite default dev server port
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # para hot reload en Docker
 
 volumes:
   ecommerce-db-data:
 
+networks:
+  ecommerce-net:
+    driver: bridge
