@@ -1,26 +1,17 @@
-version: "3.8"
 services:
-  backend:
-    build: ./backend
-    ports:
-      - "8080:8080"
-    depends_on:
-      - db
-    environment:
-      SPRING_PROFILES_ACTIVE: prod
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/ecommerce
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: postgres
-  db:
+  ecommerce-db:
     image: postgres:16-alpine
+    container_name: ecommerce-db
     environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
       POSTGRES_DB: ecommerce
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"  # solo accesible desde localhost
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - ecommerce-db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
 volumes:
-  postgres-data:
+  ecommerce-db-data:
 
