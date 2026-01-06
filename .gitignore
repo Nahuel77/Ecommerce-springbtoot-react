@@ -1,5 +1,5 @@
 # Maven
-target/
+/backend/target/
 *.class
 *.jar
 *.war
@@ -19,4 +19,3 @@ docker-compose.override.yml
 # OS
 .DS_Store
 Thumbs.db
-
