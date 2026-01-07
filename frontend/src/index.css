@@ -3,14 +3,23 @@
   line-height: 1.5;
   font-weight: 400;
 
+  /*temporal*/
+  /* height: 600px; */
+
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color: rgba(255, 255, 255, 0.87); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --bg: #ffffff;
+  --text: #111111;
+  --primary: #c62828;
+
+  --bg-altOne: #d1d1d1;
+  --bg-altTwo: #f1f1f1;
 }
 
 a {
@@ -24,15 +33,14 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  /* place-items: center; */
+  /* min-width: 320px;
+  min-height: 100vh; */
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
 }
 
 button {
@@ -54,15 +62,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    --bg: #0f0f0f;
+    --text: #eeeeee;
+    --primary: #ff5252;
   }
 }
