@@ -38,7 +38,7 @@ body {
   /* place-items: center; */
   /* min-width: 320px;
   min-height: 100vh; */
-  overflow: hidden;
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
 }
@@ -67,5 +67,28 @@ button:focus-visible {
     --bg: #0f0f0f;
     --text: #eeeeee;
     --primary: #ff5252;
+    --text: #eeeeee;
+    --text-alt: #0f0f0f;
+    --primary: #c62828;
   }
+}
+
+[data-theme="light"] {
+  --bg: #f1f1f1;
+  --bg-altOne: #d1d1d1;
+  --bg-altTwo: #0f0f0f;
+  --text: #0f0f0f;
+  --text-alt: #d1d1d1;
+  --primary: #c62828;
+  --btn: #313131;
+}
+
+[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --bg-altOne: #d1d1d1;
+  --bg-altTwo: #f1f1f1;
+  --text: #eeeeee;
+  --text-alt: #0f0f0f;
+  --primary: #c62828;
+  --btn: #1a1a1a;
 }

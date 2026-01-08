@@ -1,4 +1,6 @@
 import "./Navbar.css";
+import ThemeToggle from "./ThemeToggle";
+import { Bell, User, ShoppingCart } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -6,37 +8,27 @@ export default function Navbar() {
       <div className="topbar">
         <span>📍 Calle Don Polito 118 - Rivadavia SM</span>
         <span className="icons">
-          <i className="icon">🔔</i>
+          <Bell className="icon" />
+          <ThemeToggle />
         </span>
       </div>
 
       <div className="navbar">
         <h1 className="logo">KYNKI</h1>
+        <div className="nav-rightside">
+          <div className="search">
+            <form className="search">
+              <input type="search" placeholder="Buscar productos..." />
+              <button className="searchBtn" type="submit">
+                <img src="./public/icons/search.svg" alt="search" />
+              </button>
+            </form>
+          </div>
 
-        <div className="search">
-          <form className="search">
-            <input type="search" placeholder="Buscar productos..." />
-            <button className="searchBtn" type="submit">
-              <img src="./public/icons/search.svg" alt="search" />
-            </button>
-          </form>
-        </div>
-
-        <div className="navPanel">
-          <span>
-            <img
-              className="navPanelIcon"
-              src="./public/icons/cart-48.png"
-              alt="cart"
-            />
-          </span>
-          <span>
-            <img
-              className="navPanelIcon"
-              src="./public/icons/user-48.png"
-              alt="user"
-            />
-          </span>
+          <div className="navPanel">
+            <User className="navPanelIcon" />
+            <ShoppingCart className="navPanelIcon" />
+          </div>
         </div>
       </div>
       <div>
