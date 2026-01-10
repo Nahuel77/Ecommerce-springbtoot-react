@@ -1,0 +1,41 @@
+header {
+  position: absolute;
+  top: 0;
+  height: 3rem;
+  background-color: rgba(red, green, blue, 0);
+  width: 100%;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(red, green, blue, 0);
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-section > span {
+  margin: 0 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.options {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.option {
+  margin: 1rem;
+}

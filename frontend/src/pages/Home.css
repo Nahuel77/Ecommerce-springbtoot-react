@@ -3,11 +3,30 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 80vh;
+  height: 270vh;
   background-color: var(--bg);
   /*imagen de prueba*/
   background-image: url("./bg.png");
+  /* filter: grayscale(0.4); */
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position-y: -11rem;
+  width: 100vw;
+}
+
+.section-home {
+  margin: 3rem;
+}
+
+.drops {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 5rem;
+  line-height: 1rem;
+  font-weight: 100;
 }

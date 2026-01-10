@@ -1,0 +1,10 @@
+.card {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: black;
+  border: 1px solid rgb(170, 145, 115);
+}
+
+.card-section {
+  margin: 1rem;
+}
