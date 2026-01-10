@@ -1,12 +1,14 @@
+version: "3.9"
+
 services:
   ecommerce-db:
     image: postgres:16-alpine
     container_name: ecommerce-db
     restart: unless-stopped
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin123
       POSTGRES_DB: ecommerce
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     volumes:
       - ecommerce-db-data:/var/lib/postgresql/data
     networks:
@@ -23,10 +25,11 @@ services:
     depends_on:
       - ecommerce-db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://ecommerce-db:5432/ecommerce
-      SPRING_DATASOURCE_USERNAME: admin
-      SPRING_DATASOURCE_PASSWORD: admin123
       SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:postgresql://ecommerce-db:5432/ecommerce
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      JWT_SECRET: dev-secret-key
     networks:
       - ecommerce-net
     ports:
@@ -45,7 +48,6 @@ services:
     ports:
       - "8081:80"
 
-  
 volumes:
   ecommerce-db-data:
 
