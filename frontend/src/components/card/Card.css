@@ -1,10 +1,14 @@
 .card {
   margin: 1rem;
   padding: 1rem;
-  background-color: black;
+  background-color: rgba(1, 1, 1, 0.5);
   border: 1px solid rgb(170, 145, 115);
 }
 
 .card-section {
   margin: 1rem;
+}
+
+.item-pic {
+  width: 20vw;
 }

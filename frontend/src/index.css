@@ -57,11 +57,20 @@ button {
   width: auto;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #323cec;
+  border-radius: 1.3rem;
+
+  animation: hoverbuton 1.8s ease-in-out infinite;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-top: 2rem;
+  margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {

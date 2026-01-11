@@ -7,7 +7,7 @@ export default function Nav() {
       <div className="nav">
         <div className="nav-section">
           <Droplet />
-          <span>Drop$</span>
+          <span>Drops</span>
         </div>
         <div className="nav-section">
           <h1>KYNKI</h1>
@@ -15,7 +15,7 @@ export default function Nav() {
         <div className="nav-section">
           <ul className="options">
             <li className="option">About</li>
-            <li className="option">Shop</li>
+            <li className="option">Featured</li>
             <li className="option">
               <button className="sign-in-btn">Sign In</button>
             </li>
