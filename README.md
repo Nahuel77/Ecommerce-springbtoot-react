@@ -15,3 +15,5 @@ Mark:OS Linux - Docker. MarkOs
 --w8
 
 verificar info de kynki 
+
+-> N.J son's. test.
