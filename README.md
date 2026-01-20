@@ -6,5 +6,7 @@ Spring Boot backend with LLM integration (local-first).
 - Java 21
 - Spring Boot
 
+--on w8
 kill -9 PID o kill SIGKILL PID
 Mark:OS Linux - Docker. MarkOs
+--w8
