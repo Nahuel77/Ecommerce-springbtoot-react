@@ -7,6 +7,11 @@ Spring Boot backend with LLM integration (local-first).
 - Spring Boot
 
 --on w8
+
 kill -9 PID o kill SIGKILL PID
+
 Mark:OS Linux - Docker. MarkOs
+
 --w8
+
+verificar info de kynki 
