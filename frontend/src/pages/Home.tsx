@@ -4,9 +4,6 @@ import Card from "../components/card/Card";
 export default function Home() {
   return (
     <div className="home">
-      <video autoPlay muted loop playsInline>
-        <source src="./bg3.mp4" type="video/mp4" />
-      </video>
       <div className="content">
         <div className="section-home">
           <div>

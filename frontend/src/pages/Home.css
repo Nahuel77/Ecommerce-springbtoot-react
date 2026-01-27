@@ -11,6 +11,9 @@
   overflow: hidden;
   background: var(--bg);
   padding-top: 8rem;
+  background-image: url("bg.jpg");
+  background-position: center 20%;
+  background-size: cover;
 }
 
 .home video {
