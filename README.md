@@ -9,3 +9,6 @@ Spring Boot backend with LLM integration (local-first).
 info Kynki recibida.
 revisar info colectivos.
 w8
+
+4 octubre 2024
+dia de la noticia negra. -> colectivo 91 demoro mas de dos horas. posible bajada desde municipio.
