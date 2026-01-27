@@ -12,3 +12,5 @@ w8
 
 4 octubre 2024
 dia de la noticia negra. -> colectivo 91 demoro mas de dos horas. posible bajada desde municipio.
+B a necochea... lo esperaba
+esperé en la parada con cámara todo el tiempo. 
