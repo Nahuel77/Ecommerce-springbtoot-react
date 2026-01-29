@@ -4,6 +4,6 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  object-position: center 30%; /* <- Esto lo cambia */
+  object-position: center; /* <- Esto lo cambia */
   z-index: 9999;
 }

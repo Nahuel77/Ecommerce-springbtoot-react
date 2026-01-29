@@ -1,5 +1,6 @@
 import "./Home.css";
 import Card from "../components/card/Card";
+import Manifesto from "./Manifesto";
 
 export default function Home() {
   return (
@@ -16,8 +17,9 @@ export default function Home() {
         </div>
         <div className="section-home">
           <div>
-            <h3>FEATURED PRODUCTS</h3>
           </div>
+          <Manifesto/>
+          <h3>FEATURED PRODUCTS</h3>
           <div className="drops">
             <Card />
             <Card />

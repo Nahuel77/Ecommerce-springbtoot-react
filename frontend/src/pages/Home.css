@@ -12,7 +12,7 @@
   background: var(--bg);
   padding-top: 8rem;
   background-image: url("bg.jpg");
-  background-position: center 20%;
+  background-position: center;
   background-size: cover;
 }
 
@@ -71,3 +71,5 @@ h2 {
     min-height: 100svh; /* mejor que vh en mobile */
   }
 }
+
+/* media 800 */

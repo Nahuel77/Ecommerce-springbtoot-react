@@ -13,7 +13,7 @@ const IntroVideo = ({ onEnd }: IntroVideoProps) => {
       onEnded={onEnd}
       className="intro-video"
     >
-      <source src="videos/intro2.mp4" type="video/mp4" />
+      <source src="videos/intro.mp4" type="video/mp4" />
     </video>
   );
 };
